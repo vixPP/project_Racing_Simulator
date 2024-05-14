@@ -1,0 +1,3 @@
+
+#define MATHPOWERLIBRARY_API __declspec(dllexport)
+#define MATHPOWERLIBRARY_API __declspec(dllimport)

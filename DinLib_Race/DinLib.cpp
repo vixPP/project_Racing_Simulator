@@ -3,7 +3,7 @@
 
 namespace DinLib
 {
-	double camel :: function_camel(int long_distance) const
+    double camel::function_camel(int long_distance) const
 	{
         int time_out_1 = 5, time_out_all = 8, NumStops = 0;
         double x = 0; 
