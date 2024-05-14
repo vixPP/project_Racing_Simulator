@@ -206,8 +206,8 @@ int main()
 		for (int i = 1; i < 10; ++i) {
 			if (mass[i] == 3) 
 			{
-				DinLib::camel f1;
-				mtime[i] = f1.function_camel(long_distance);
+				DinLib::camel f3;
+				mtime[i] = f3.function_camel(long_distance);
 				++sum;
 			}
 
@@ -223,6 +223,52 @@ int main()
 				DinLib::centaur f4;
 				mtime[i] = f4.function_centaur(long_distance);
 				++sum;
+			}
+
+			else if (mass[i] == 1)
+			{
+				DinLib::boots_rover f1;
+				mtime[i] = f1.function_boots_rover(long_distance);
+				++sum;
+			}
+
+			else if (mass[i] == 7)
+			{
+				DinLib::flying_carpet f7;
+				mtime[i] = f7.function_flying_carpet(long_distance);
+				++sum;
+			}
+
+			else if (mass[i] == 6)
+			{
+				DinLib::eagle f6;
+				mtime[i] = f6.function_eagle(long_distance);
+				++sum;
+			}
+			else if (mass[i] == 5)
+			{
+				DinLib::broomstick f5;
+				mtime[i] = f5.function_broomstick(long_distance);
+				++sum;
+			}
+
+		}
+
+		for (int i = 1; i < sum; ++i) 
+		{ 
+			for (int j = 1; j < sum; ++j) 
+			{
+				if (mtime[j] > mtime[j + 1]) 
+				{
+					double tmp = mtime[j];
+					mtime[j] = mtime[j + 1];
+					mtime[j + 1] = tmp;
+
+					string tmp2 = mas[j];
+					mas[j] = mas[j + 1];
+					mas[j + 1] = tmp2;
+				}
+
 			}
 
 		}

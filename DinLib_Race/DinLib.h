@@ -52,12 +52,14 @@ namespace DinLib
 
 	class boots_rover : ground_based
 	{
+	public:
 		boots_rover()
 		{
 			this->speed = 6;
 			this->time_to_rest = 60;
 		}
-	//	double function_boots_rover(int long_distance);
+		MATHPOWERLIBRARY_API double function_boots_rover(int long_distance) const;
+		
 	};
 
 
@@ -65,6 +67,35 @@ namespace DinLib
 	{
 	public:
 		double speed;
-		double time_to_rest;
+	};
+
+	class flying_carpet : air
+	{
+	public:
+		flying_carpet()
+		{
+			this->speed = 10;
+		}
+		MATHPOWERLIBRARY_API double function_flying_carpet(int long_distance) const;
+	};
+
+	class eagle : air
+	{
+	public:
+		eagle()
+		{
+			this->speed = 8;
+		}
+		MATHPOWERLIBRARY_API double function_eagle(int long_distance) const;
+	};
+
+	class broomstick : air
+	{
+	public:
+		broomstick()
+		{
+			this->speed = 20;
+		}
+		MATHPOWERLIBRARY_API double function_broomstick(int long_distance) const;
 	};
 }
