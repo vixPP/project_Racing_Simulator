@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 
-#ifdef DINLIB_RACE 
+#ifdef DINLIB_RACE
 #define MATHPOWERLIBRARY_API __declspec(dllexport)
 #else 
 #define MATHPOWERLIBRARY_API __declspec(dllimport)

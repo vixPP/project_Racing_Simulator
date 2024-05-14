@@ -11,7 +11,7 @@ namespace DinLib
         
 
             Totaltime = static_cast <double> (long_distance) / speed;
-            NumStops = static_cast <double> (long_distance) / time_to_rest;
+            NumStops = (long_distance) / time_to_rest;
 
             if (NumStops == 0) 
             {
@@ -41,11 +41,11 @@ namespace DinLib
 
     double fast_camel::function_fast_camel(int long_distance) const
     {
-        int time_out_1 = 5, time_out_2 = 6.5, time_out_all = 8, NumStops = 0;
-        double x = 0, Totaltime = 0;
+        int time_out_1 = 5, time_out_all = 8, NumStops = 0;
+        double x = 0, Totaltime = 0, time_out_2 = 6.5;
 
         Totaltime = static_cast <double> (long_distance) / speed;
-        NumStops = static_cast <double>(long_distance) / time_to_rest;
+        NumStops = (long_distance) / time_to_rest;
 
         if (NumStops == 0) {
             x = Totaltime;
@@ -72,14 +72,14 @@ namespace DinLib
         }
         return 0;
     }
-
+    
     double centaur::function_centaur(int long_distance) const
     {
         int time_out_all = 2, NumStops = 0;
         double x = 0, Totaltime = 0;
 
         Totaltime = static_cast <double> (long_distance) / speed;
-        NumStops = static_cast <double> (long_distance) / time_to_rest;
+        NumStops = (long_distance) / time_to_rest;
 
         x = NumStops * time_out_all + Totaltime;
 
@@ -95,7 +95,7 @@ namespace DinLib
 
 
         Totaltime = static_cast <double> (long_distance) / speed;
-        NumStops = static_cast <double> (long_distance) / time_to_rest;
+        NumStops = (long_distance) / time_to_rest;
 
         if (NumStops == 0)
         {
@@ -152,7 +152,8 @@ namespace DinLib
 
         if (long_distance < 1000)
         {
-            FinalyDist = long_distance;           x = static_cast<double> (FinalyDist / speed);
+            FinalyDist = long_distance;          
+            x = static_cast<double> (FinalyDist / speed);
         }
         else
         {
@@ -195,5 +196,7 @@ namespace DinLib
         }
     }
 
+
+    
 
 }
